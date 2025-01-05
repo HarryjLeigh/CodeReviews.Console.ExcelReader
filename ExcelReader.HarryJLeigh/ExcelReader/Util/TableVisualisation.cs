@@ -29,5 +29,6 @@ public static class TableVisualisation
             table.AddRow(rowData);
         }
         AnsiConsole.Write(table);
+        Console.ReadKey();
     }
 }

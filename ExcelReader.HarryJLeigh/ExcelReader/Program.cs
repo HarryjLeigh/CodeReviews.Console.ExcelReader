@@ -20,16 +20,3 @@ var movieData = fileService.ReadExcelFile();
 movieController.InsertAll(movieData);
 List<Movie> fetchedMovies = movieController.GetAllMovies();
 TableVisualisation.ShowData(fetchedMovies);
-
-
-
-
-
-
-
-
-
-
-
-
-

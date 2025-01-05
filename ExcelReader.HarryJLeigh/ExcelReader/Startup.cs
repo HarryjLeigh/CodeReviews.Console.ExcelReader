@@ -31,11 +31,14 @@ public class Startup
 
     private static IConfiguration BuildConfiguration()
     {
+        string projectRootDirectory = Path.Combine(AppContext.BaseDirectory, "../../../");
+
         return new ConfigurationBuilder()
-            .SetBasePath(AppContext.BaseDirectory)
+            .SetBasePath(projectRootDirectory)
             .AddJsonFile("appSettings.json", optional: false, reloadOnChange: true)
             .Build();
     }
+    
 
     private ServiceProvider ConfigureServices()
     {
